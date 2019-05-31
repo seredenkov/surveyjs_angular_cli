@@ -4,6 +4,8 @@ import * as widgets from 'surveyjs-widgets';
 
 import 'inputmask/dist/inputmask/phone-codes/phone.js';
 
+import { textwithbutton } from './widgets/text-with-button';
+
 widgets.icheck(Survey);
 widgets.select2(Survey);
 widgets.inputmask(Survey);
@@ -17,6 +19,8 @@ widgets.ckeditor(Survey);
 widgets.autocomplete(Survey);
 widgets.bootstrapslider(Survey);
 widgets.prettycheckbox(Survey);
+// widgets.textwithbutton(Survey);
+Survey.CustomWidgetCollection.Instance.addCustomWidget(textwithbutton, "customtype");
 
 Survey.JsonObject.metaData.addProperty('questionbase', 'popupdescription:text');
 Survey.JsonObject.metaData.addProperty('page', 'popupdescription:text');

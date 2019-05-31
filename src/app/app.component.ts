@@ -1,11 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "app works!";
   json = {
     title: "Product Feedback Survey Example",
@@ -13,6 +13,12 @@ export class AppComponent {
     pages: [
       {
         elements: [
+          {
+            type: "textwithbutton",
+            name: "q1",
+            placeHolder: "put some text here",
+            buttonText: "Custom button text"
+          },
           {
             type: "text",
             inputMask: "phone",
@@ -189,6 +195,10 @@ export class AppComponent {
       }
     ]
   };
+
+  ngOnInit() {
+    // initWidjet();
+  }
 
   onSurveySaved(survey) {
     this.json = survey;
