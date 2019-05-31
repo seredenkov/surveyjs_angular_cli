@@ -14,6 +14,12 @@ export class AppComponent {
       {
         elements: [
           {
+            type: "textwithbutton",
+            name: "q1",
+            placeHolder: "put some text here",
+            buttonText: "Custom button text"
+          },
+          {
             type: "text",
             inputMask: "phone",
             popupdescription: "Some text"
