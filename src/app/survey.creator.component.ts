@@ -151,6 +151,11 @@ export class SurveyCreatorComponent {
     );
     SurveyKo.JsonObject.metaData.addProperty("page", "popupdescription:text");
 
+    SurveyKo.JsonObject.metaData.addClass("textwithbutton", [], null, "text");
+    SurveyKo.JsonObject.metaData.addProperties("textwithbutton", [
+      { name: "buttonText", default: "Click Me" }
+    ]);
+
     let options = { showEmbededSurveyTab: true, generateValidJSON: true };
     this.surveyCreator = new SurveyCreator.SurveyCreator(
       "surveyCreatorContainer",
